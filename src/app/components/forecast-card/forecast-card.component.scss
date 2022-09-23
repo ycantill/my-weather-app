@@ -1,0 +1,132 @@
+// Colors palette
+$white: #eaebee;
+$gray: #7a8498;
+$indigo: #0d2242;
+$cyan: #60c1c6;
+
+.forecast {
+    background-color: $indigo;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px 20px;
+
+    .weather {
+        display: flex;
+        flex-wrap: wrap;
+        padding-bottom: 10px;
+
+        .information {
+            flex: 1;
+            min-width: 200px;
+
+            @media (max-width: 300px) {
+                text-align: center;
+            }
+            
+            @media (max-width: 270px) {
+                min-width: 100px;
+            }
+
+            .temperature {
+                display: block;
+                font-size: 48px;
+                margin-bottom: 30px;
+            }
+
+            .time {
+                margin-bottom: 0px;
+            }
+
+            .location {
+                p {
+                    display: inline-block;
+                    font-size: 24px;
+                    margin-bottom: 0px;
+
+                    &:first-of-type {
+                        color: $cyan;
+                        margin-right: 5px;
+                    }
+
+                    &:last-of-type {
+                        color: $gray;
+                        font-size: 20px;
+
+                        @media (min-width: 300px) {
+
+                            &::before {
+                                content: '|';
+                                color: $white;
+                                font-size: 24px;
+                                margin-right: 5px;
+                            }
+                        }
+    
+                    }
+                }
+            }
+            .max-min {
+                p {
+                    display: inline-block;
+                    &:last-of-type {
+                        color: $gray;
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+        .weathercode {
+            align-items: center;
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            min-width: 100px;
+            min-height: 100px;
+
+            .material-symbols-outlined {
+                transform: scale(4);
+            }
+        }
+    }
+    .daily {
+        border-top: $white solid 2px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 20px;
+
+        .day {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            min-width: 100px;
+            min-height: 120px;
+
+            .material-symbols-outlined {
+                font-size: 48px;
+                margin-bottom: 10px;
+                height: 48px;
+                width: 48px;
+            }
+
+            .time {
+                color: $cyan;
+                margin-bottom: 0px;
+            }
+
+            .max-min {
+                display: flex;
+                p {
+                    &:first-of-type {
+                        color: $white;
+                    }
+                    &:last-of-type {
+                        color: $gray;
+                        margin-left: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

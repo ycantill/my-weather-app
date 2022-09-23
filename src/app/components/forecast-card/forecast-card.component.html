@@ -1,0 +1,33 @@
+<mat-card class="forecast">
+  <article class="weather">
+    <div class="information">
+      <p class="temperature">{{ forecast.weather.temperature }}°</p>
+      <div class="location">
+        <p>{{ forecast.location.name }}</p>
+        <p>{{ forecast.location.country }}</p>
+      </div>
+      <p class="time">{{ forecast.weather.time | date: "EEEE" }}</p>
+      <div class="max-min">
+        <p>{{ forecast.weather.max }}°</p>
+        <p>{{ forecast.weather.min }}°</p>
+      </div>
+    </div>
+    <div class="weathercode">
+      <span class="material-symbols-outlined">{{
+        getWeathercodeIcon(forecast.weather.weathercode)
+      }}</span>
+    </div>
+  </article>
+  <article class="daily">
+    <article *ngFor="let day of forecast.daily" class="day">
+      <span class="material-symbols-outlined">{{
+        getWeathercodeIcon(day.weathercode)
+      }}</span>
+      <p class="time">{{ day.time | date: "EEEE" }}</p>
+      <div class="max-min">
+        <p>{{ day.max }}°</p>
+        <p>{{ day.min }}°</p>
+      </div>
+    </article>
+  </article>
+</mat-card>

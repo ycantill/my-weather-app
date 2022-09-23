@@ -1,27 +1,45 @@
-# MyWeatherApp
+# My Weather App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.3.
+This is a sample app that you can query for a city and get the weather.
 
-## Development server
+## Demo
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+https://my-weather-app-c76d1.web.app/
 
-## Code scaffolding
+## Run Locally
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Clone the project
 
-## Build
+```bash
+  git clone https://github.com/ycantill/my-weather-app.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Go to the project directory
 
-## Running unit tests
+```bash
+  cd my-weather-app
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Install dependencies
 
-## Running end-to-end tests
+```bash
+  npm install
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Start the server
 
-## Further help
+```bash
+  npm start
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Running Tests
+
+To run tests, run the following command
+
+```bash
+  npm test
+```
+
+## Authors
+
+- [@ycantill](https://www.github.com/ycantill)

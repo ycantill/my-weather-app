@@ -1,0 +1,24 @@
+<mat-form-field appearance="outline">
+  <mat-label>Search for a city</mat-label>
+  <input
+    type="text"
+    aria-label="Search for a city"
+    matInput
+    [formControl]="searchText"
+    [matAutocomplete]="geoLocationsResults"
+  />
+  <mat-autocomplete
+    #geoLocationsResults="matAutocomplete"
+    aria-labelledby="Pick a city"
+  >
+    <mat-option
+      *ngFor="let geoLocation of geoLocations$ | async"
+      [value]="geoLocation.name"
+      (onSelectionChange)="onGeoLocationChanged(geoLocation)"
+    >
+      {{ geoLocation.name }} - {{ geoLocation.admin1 }} -
+      {{ geoLocation.country }}
+    </mat-option>
+  </mat-autocomplete>
+  <mat-error *ngIf="searchText.invalid">Not a valid city name</mat-error>
+</mat-form-field>

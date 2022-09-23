@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "my-weather-app-c76d1": {
+      "hosting": {
+        "my-weather-app": [
+          "my-weather-app-c76d1"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "my-weather-app-c76d1"
+  }
+}
